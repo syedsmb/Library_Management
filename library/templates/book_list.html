@@ -1,0 +1,84 @@
+
+{% extends 'base.html' %}
+{% load static %}
+
+<meta name="csrf-token" content="{{ csrf_token }}">
+
+{% block title %}Book List{% endblock %}
+
+{% block content %}
+<h1>Book List</h1>
+
+
+{% if messages %}
+    <div id="messages">
+        {% for message in messages %}
+            <div class="alert {{ message.tags }}">
+                {{ message }}
+            </div>
+        {% endfor %}
+    </div>
+{% endif %}
+
+<div id="current-time">
+    <strong>Current Time:</strong> <span id="time-display"></span>
+</div>
+
+
+<div id="book-list">
+    {% for book in books %}
+        <div class="book">
+            <h3>{{ book.title }}</h3>
+            <p>Author: {{ book.author }}</p>
+            <p>Published: {{ book.published_date }}</p>
+            
+            {% if book.image %}
+                <img src="{{ book.image.url }}" alt="{{ book.title }} Image" style="width: 100px; height: auto;">
+            {% else %}
+                <p>No image available</p>   
+            {% endif %}
+
+            {% if book.book_file %}
+            <a href="{{ book.book_file.url }}" download>Download Book</a>
+        {% endif %}
+
+        {% if book.external_link %}
+            <a href="{{ book.external_link }}" target="_blank">View Book Online</a>
+        {% endif %}
+
+          
+          <div class="price-section">
+            <span class="original-price">₹{{ book.original_price }}</span>
+            <span class="discounted-price">₹{{ book.discounted_price }}</span>
+            <span class="offer">(Flat {{ book.offer_percentage }}% OFF)</span>
+        </div>
+
+        
+           
+        <div class="cart">
+            <span class="add-to-cart-btn" 
+            data-url="{% url 'add_to_cart' book.id %}" 
+            onclick="handlePostRequest(this)">
+          Add to Cart
+      </span>
+      <span class="wish-list-btn" 
+      data-url="{% url 'add_to_wishlist' book.id %}" 
+      onclick="handlePostRequest(this)">
+    <i class="fa-regular fa-heart"></i>
+</span>
+</div>
+
+        <div class="cart-delete-price">
+            <span class="delete-btn" 
+            data-url="{% url 'delete_book' book.id %}" 
+            onclick="handlePostRequest(this, true)">
+          Delete Book
+      </span>
+        </div>
+        </div>
+    {% empty %}
+        <p>No books available</p>
+    {% endfor %}
+</div>
+<script src="{% static 'js/script.js' %}"></script>
+{% endblock %}

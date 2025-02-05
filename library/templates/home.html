@@ -1,0 +1,28 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Library Management System</h1>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <div class="actions">
+            <a href="{% url 'check_users' %}"> <i class="fa-solid fa-user"></i><br> Users</a><br><br>
+        <div class="smb">
+            <a href="{% url 'add_book' %}"> <i class="fa-solid fa-book"></i><br>Add Book </a><br><br>
+        </div>
+        <div class="one">
+            <a href="{% url 'home' %}"> <i class="fa-solid fa-house"></i><br>Home</a> <!-- Home button -->
+        </div>
+        </div>
+    </div>
+</body>
+</html>

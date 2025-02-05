@@ -1,0 +1,70 @@
+<div class="mouni">
+{% extends 'base.html' %}
+
+
+{% block title %}Check Users{% endblock %}
+
+{% block content %}
+<h1>Check Users</h1>
+
+
+<div id="add-user-form">
+    <h3>Add a New User</h3>
+    <form method="POST" action="{% url 'check_users' %}">
+        {% csrf_token %}
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
+
+        <button type="submit">Add User</button>
+    </form>
+</div>
+
+
+{% if users %}
+<h3>Existing Users</h3>
+<table class="users-table"  border="1">
+    <thead>
+        <tr>
+            <th>Sl.No</th>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Joined Date</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for user in users %}
+            <tr>
+                <td>{{ forloop.counter }}</td>
+                <td>{{ user.username }}</td>
+                <td>{{ user.email }}</td>
+                <td>{{ user.date_joined|date:"d M Y" }}</td>
+                <td>
+                    <form method="POST" action="{% url 'delete_user' user.id %}">
+                        {% csrf_token %}
+                        <button type="submit" class="delete-button">Delete</button>
+                    </form>
+                </td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% else %}
+<p>No users found.</p>
+{% endif %}
+
+{% if messages %}
+    <div id="messages">
+        {% for message in messages %}
+            <p>{{ message }}</p>
+        {% endfor %}
+    </div>
+{% endif %}
+{% endblock %}
+</div>

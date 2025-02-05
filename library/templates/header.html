@@ -1,0 +1,26 @@
+<div class="header">
+    <h1>Library Management System</h1>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="{% url 'home' %}"> <i class="fa-solid fa-house"></i> Home</a></li>
+            <li><a href="{% url 'check_users' %}"> <i class="fa-solid fa-user"></i> Check Users</a></li>
+            <li><a href="{% url 'add_book' %}"><i class="fa-solid fa-book"></i> Add Book</a></li>
+            <li><a href="{% url 'book_list' %}"><i class="fa-solid fa-list"></i> Book List</a></li>
+            <li><a href="{% url 'login_signup' %}"><i class="fa-solid fa-right-to-bracket"></i>Login/Sign Up</a></li>
+            <li>
+                <a href="{% url 'view_cart' %}" class="cart-button">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span></span>
+                </a>
+            </li>
+            <li>
+                <a href="{% url 'wishlist' %}" class="wishlist-button">
+                    <i class="fa-regular fa-heart"></i>
+                    <span></span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+

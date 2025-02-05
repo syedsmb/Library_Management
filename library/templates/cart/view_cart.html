@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load cart_filters %}
+
+{% load static %}
+
+{% block content %}
+<div class="cart-container">
+    <div class="cart-header">
+        <h1>Your Cart</h1>
+    </div>
+
+    {% if cart_items %}
+    <ul class="cart-items">
+        {% for item in cart_items %}
+        <li class="cart-item">
+            <img src="{{ item.book.image.url }}" alt="{{ item.book.title }}">
+            <div class="cart-item-details">
+                <h2>{{ item.book.title }}</h2>
+                <p>Price: ${{ item.book.price }}</p>
+            </div>
+            <span class="cart-item-quantity">x{{ item.quantity }}</span>
+            <a href="{% url 'remove_from_cart' item.id %}" class="cart-item-remove">Remove</a>
+        </li>
+        {% endfor %}
+    </ul>
+
+    <div class="cart-total">
+        Total: ${{ cart_items|sum_total }}
+    </div>
+    
+    <a href="{% url 'checkout' %}" class="checkout-btn">Proceed to Checkout</a>
+    {% else %}
+    <p>Your cart is empty.</p><br><br>
+    <a href="{% url 'home' %}">Return to Home</a>
+    {% endif %}
+</div>
+{% endblock %}
+

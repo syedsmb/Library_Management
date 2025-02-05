@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}Library Books{% endblock %}
+
+{% block content %}
+<div id="book-list">
+    {% for book in books %}
+        <div class="book">
+            <h3>{{ book.title }}</h3>
+            <p>{{ book.author }}</p>
+          
+            {% if book.image %}
+                <img src="{{ book.image.url }}" alt="{{ book.title }} Image" style="width: 100px; height: auto;">
+            {% else %}
+                <p>No image available</p>
+            {% endif %}
+        </div>
+    {% endfor %}
+</div>
+
+<button onclick="fetchBooks()">Load Books</button>
+
+<h1>Add a New Book</h1>
+
+
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}  
+    <button type="submit">Add Book</button>
+</form>
+
+<p><a href="{% url 'home' %}">Go back to Home</a></p>
+{% endblock %}

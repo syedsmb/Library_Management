@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="cart-container">
+    <div class="cart-header">
+        <h1>Your Wishlist</h1>
+    </div>
+
+
+{% if wishlist_items %}
+    <ul>
+        {% for item in wishlist_items %}
+            <li>
+                <strong>{{ item.book.title }}</strong> by {{ item.book.author }}
+                <p> {{ book.added_on|date:"F d, Y, H:i:s" }}</p>
+                <p id="current-time">Added on: Loading...</p>
+
+               
+                <a href="{% url 'remove_from_wishlist' item.book.id %}">Remove</a>
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'home' %}">Back to Home</a>
+{% else %}
+    <p>Your wishlist is empty!</p>
+    <a href="{% url 'home' %}">Return to Home</a>
+{% endif %}
+</div>
+<script src="{% static 'js/script.js' %}"></script>
+
+{% endblock %}
+
+

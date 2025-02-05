@@ -1,0 +1,775 @@
+/* General Styles */
+body {
+    background-image: url('../images/home background.jpg'); 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    background-position: center; 
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+h1,h2, h3 {
+    color: #2d3436;
+    text-align: center;
+}
+
+a {
+    color: #6c5ce7;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #3015e1;
+    text-decoration: underline;
+}
+
+.container{
+    display: flex;
+    max-width: 800px;
+    padding: 20px;             
+    text-align: center;      
+    width: 80%;
+    margin: 200px auto;
+    background-color: #dddce0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading Styling */
+.container h1 {
+    display: inline-block;
+    font-size: 2.5rem; 
+    font-weight: bold;
+    color: purple; 
+    margin-bottom: 20px;
+    text-align: center;
+    position: fixed;
+    left: 500px;
+}
+h1{
+    position: relative;
+    color:#ebf2f8;
+   
+}
+
+/* Actions Links Styling */
+.actions a {
+    display: inline-block;
+    font-size: 1.2rem; 
+    font-weight: bold;
+    color: #3d30f5; 
+    text-decoration: none; 
+    margin: 10px 0; 
+    transition: color 0.3s ease; 
+    text-align: center;
+    position: relative;
+    top: 100px;
+    left: 300px;
+}
+
+.actions a:hover {
+    color: gold;
+}
+.smb{
+    top: 150px;
+    left: 200px;
+    text-align: center;    
+}
+.smb:hover{
+    color: gold;
+}
+.one{
+    top: 150px;
+    left: 200px;
+    text-align: center;
+}
+.one:hover{
+    color: gold;
+}
+/* Home Button Styling */
+.btn-home {
+    display: inline-block; 
+    font-size: 1rem; 
+    font-weight: bold;
+    color: white; 
+    background-color: #00b894;
+    text-decoration: none; 
+    padding: 10px 20px;
+    border-radius: 5px; 
+    margin-top: 20px;
+    transition: background-color 0.3s ease; 
+}
+
+.btn-home:hover {
+    background-color: #019874; 
+}
+
+button {
+    background-color: #00b894;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #019874;
+}
+
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #c2d2f1;
+    color: #ffffff;
+    border-radius: 5px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.nav-links a:hover {
+   color: black;
+}
+
+
+/* Footer */
+.basha{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    font-size: 0.9rem;
+}
+
+.footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    font-size: 0.9rem;
+}
+
+.footer p{
+    text-align: center;
+}
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.footer-links li a {
+    color: #6c5ce7;
+}
+
+.footer-links li a:hover {
+    color: #dcdde1;
+}
+.adding{
+    background-image: url('../images/adding\ back.jpg'); 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed;
+    background-position: center;
+}
+.messages {
+    margin: 20px 0;
+}
+
+.message {
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.message.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+/* Form Styles */
+.syed{
+      width: 500px;
+      margin: 0 auto;
+      background: #ed71d7;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+form {
+    margin: 0 auto;
+    background: #ed71d7;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+form div {
+    background-color: rgba(255, 255, 255, 0.986); 
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+form input, form select, form button {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+/* Success Message */
+.success-message {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    border-radius: 5px;
+}
+
+/* Book List */
+#book-list {
+    display: grid;
+    grid-template-columns: repeat( 3, 1fr);
+    gap: 20px;
+    padding: 20px;
+    margin: 0 auto;
+    justify-content: space-evenly;
+    justify-items: center;
+}
+
+/* No Books Message */
+#book-list p {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #777;
+}
+
+.book {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.3s ease;
+    width: 100%; 
+    max-width: 300px; 
+}
+
+.book:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.book img {
+    max-width: 150px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+
+.book  h3 {
+    font-size: 18px;
+    color: #333;
+    margin: 10px 0 5px;
+}
+
+.book p {
+    font-size: 14px;
+    color: #555;
+    margin: 5px 0;
+}
+
+.book button {
+    margin-top: 10px;
+}
+
+/* Price Section Styles */
+.price-section {
+    margin-top: 10px;
+    font-size: 16px;
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+}
+
+.original-price {
+    text-decoration: line-through;
+    color: #7f8c8d;
+    font-size: 14px;
+}
+
+.discounted-price {
+    font-weight: bold;
+    color: #e74c3c;
+    font-size: 18px;
+}
+
+.offer {
+    color: #27ae60;
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+
+.cart {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.inline-form {
+    display: inline-block;
+    margin: 0;
+}
+
+
+
+.cart button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    text-align: center;
+}
+
+.cart-button i,
+.wishlist-button i {
+    font-size: 18px;
+}
+
+.cart-button span,
+.wishlist-button span {
+    font-size: 14px;
+}
+
+
+
+
+.add-to-cart-btn:hover {
+    background-color: #ddef1d;
+}
+
+.wish-list-btn:hover{
+    background-color: red;
+}
+.wish-list-btn i {
+    font-size: 16px;
+}
+
+.add-to-cart-btn,
+.wish-list-btn {
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 14px;
+    padding: 10px 15px;
+    background-color: #10f651;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+
+
+/* Button Styling */
+button {
+    padding: 10px 15px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+
+/* Delete Button Styling */
+.cart-delete-price {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    text-align: center; 
+    align-items: center;
+    width: 320px;
+    gap: 10px;
+    left: 500px;
+}
+
+.delete-btn {
+    background-color: #10f651;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 14px;
+    transition: background-color 0.3s;
+    width: 100px; 
+}
+
+.delete-btn:hover {
+    color: rgb(142, 6, 6);
+    background-color: #a71d2a;
+}
+
+.book-price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #2c3e50; 
+}
+
+
+#messages {
+    margin-bottom: 20px;
+}
+.alert {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+.alert.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+.alert.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+
+/* Auth Forms */
+.auth-container {
+    max-width: 500px;
+    margin: 50px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+.login{
+    background-image: url('../images/lock\ back.jpg'); 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed;
+    background-position: center;
+}
+.auth-container h2 {
+    color: #2d3436;
+}
+
+.auth-container .form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.auth-container .btn-submit {
+    width: 100%;
+}
+
+
+
+/* Cart Container */
+.cart-container {
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+}
+
+
+/* Cart Header */
+.cart-header {
+    text-align: center;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.cart-header h1 {
+    font-size: 24px;
+    color: #333;
+    margin: 0;
+}
+
+/* Cart Items List */
+.cart-items {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.cart-item:last-child {
+    border-bottom: none;
+}
+
+.cart-item img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.cart-item-details {
+    flex: 1;
+    margin-left: 15px;
+}
+
+.cart-item-details h2 {
+    font-size: 18px;
+    margin: 0;
+    color: #333;
+}
+
+.cart-item-details p {
+    font-size: 14px;
+    color: #666;
+    margin: 5px 0 0;
+}
+
+.cart-item-quantity {
+    font-size: 16px;
+    color: #444;
+}
+
+.cart-item-remove {
+    color: #e74c3c;
+    text-decoration: none;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.cart-item-remove:hover {
+    text-decoration: underline;
+}
+
+/* Total Section */
+.cart-total {
+    text-align: right;
+    margin-top: 20px;
+    font-size: 18px;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Checkout Button */
+.checkout-btn {
+    display: block;
+    text-align: center;
+    margin: 20px auto 0;
+    background-color: #28a745;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.checkout-btn:hover {
+    background-color: #218838;
+}
+
+
+
+/* Container for the content */
+#add-user-form {
+    max-width: 450px;
+    margin: 20px auto;
+    background-color: #00b894;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.mouni{
+    background-image: url('../images/usersback.jpg');
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    background-position: center; 
+}
+.users-table{
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+/* Styling the Add User Form */
+#add-user-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+#add-user-form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#add-user-form input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+#add-user-form button {
+    background-color: rgb(21, 231, 67);
+    color: white;
+    padding: 5px 5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+#add-user-form button:hover {
+   background-color: rgb(16, 19, 235);
+}
+
+/* Styling the user table */
+.users-table {
+    width: 50%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.users-table th, .users-table td {
+    text-align: left;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+}
+
+.users-table th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.users-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.users-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+
+
+/* Styling messages */
+#messages {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 10px 15px;
+    background-color: #dff0d8;
+    color: #3c763d;
+    border: 1px solid #d6e9c6;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+
+/* Responsive Design */
+@media  (max-width: 768px) {
+    .header nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+     #book-list {
+        grid-template-columns: repeat(2, 1fr);
+    } 
+
+    .container, .auth-container, #cart {
+        padding: 15px;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    ul li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    ul li a {
+        margin-top: 10px;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+    book-list {
+        grid-template-columns: 1fr;
+    }
+} 

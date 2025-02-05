@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load cart_filters %}
+
+{% block content %}
+<h2>Checkout</h2>
+<p>Review your cart items and proceed to payment.</p>
+
+<div class="cart-items">
+    {% for item in cart_items %}
+        <div class="item">
+            <h3>{{ item.name }}</h3> 
+            <p>Quantity: {{ item.quantity }}</p>
+            <p>Price: ${{ item.price }}</p>
+        </div>
+    {% endfor %}
+</div>
+
+<div class="cart-total">
+    <h3>Total: ${{  total_price }}</h3> 
+</div>
+
+<a href="{% url 'process_payment' %}" class="btn btn-primary">Proceed to Payment</a>
+{% endblock %}
